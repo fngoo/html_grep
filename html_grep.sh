@@ -29,6 +29,7 @@ rg  -oPHn  "smpt..............................................................."
 cd $output
 touch $output/4_html_gp.txt ; sort -u $output/4_html_grep.txt|uniq|tee -a $output/4_html_gp.txt ; rm $output/4_html_grep.txt 
 
+cd $output/3_html
 a=`rg  -oPHn  "Apache/" *.html`; a_num=`echo $a|grep -o -P ".*?(?=\.html)"` ;b=`head -$a_num /root/script/httprobe.txt |tail -1` ; echo $a|tee -a   $output/4_html_gp.txt ; echo $b|tee -a   $output/4_html_gp.txt
 a=`rg  -oPHn  "Version Information:" *.html`; a_num=`echo $a|grep -o -P ".*?(?=\.html)"` ; b=`head -$a /root/script/httprobe.txt |tail -1` ; echo $a|tee -a   $output/4_html_gp.txt ; echo $b|tee -a   $output/4_html_gp.txt
 a=`rg  -oPHn  "Tomcat/" *.html`; a_num=`echo $a|grep -o -P ".*?(?=\.html)"` ; b=`head -$a_num /root/script/httprobe.txt |tail -1` ; echo $a|tee -a   $output/4_html_gp.txt ; echo $b|tee -a   $output/4_html_gp.txt
