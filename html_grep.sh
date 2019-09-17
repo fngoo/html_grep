@@ -17,14 +17,6 @@ rg  -oPHn  "ip..............................................................." *
 rg  -oPHn  "addr..............................................................." *.html|tee -a   $output/4_html_grep.txt
 rg  -oPHn  "priva..............................................................." *.html|tee -a   $output/4_html_grep.txt
 rg  -oPHn  "smpt..............................................................." *.html|tee -a   $output/4_html_grep.txt
-rg  -oPHn  "Apache/" *.html|tee -a   $output/4_html_grep.txt
-rg  -oPHn  "Version Information:" *.html|tee -a   $output/4_html_grep.txt
-rg  -oPHn  "Tomcat/" *.html|tee -a   $output/4_html_grep.txt
-rg  -oPHn  "This is the default welcome page" *.html|tee -a   $output/4_html_grep.txt
-rg  -oPHn  "PHP Version" *.html|tee -a   $output/4_html_grep.txt
-rg  -oPHn  "This page is used to test the proper operation of the" *.html|tee -a   $output/4_html_grep.txt
-
-
 
 #rg  -l "wp-content" *.html|tee -a   $output/4_html_num.txt
 #sed -e "s/\.html//g"  $output/4_html_num.txt >> $output/4_html_grep.txt ; rm $output/4_html_num.txt
@@ -34,10 +26,15 @@ rg  -oPHn  "This page is used to test the proper operation of the" *.html|tee -a
 #cat $html >> $output/4_html_wpscan.txt
 #done
 
+cd $output
+touch $output/4_html_gp.txt ; sort -u $output/4_html_grep.txt|uniq|tee -a $output/4_html_gp.txt ; rm $output/4_html_grep.txt 
 
+a=`rg  -oPHn  "Apache/" *.html`; a_num=`echo $a|grep -o -P ".*?(?=\.html)"` ;b=`head -$a_num /root/script/httprobe.txt |tail -1` ; echo $a|tee -a   $output/4_html_gp.txt ; echo $b|tee -a   $output/4_html_gp.txt
+a=`rg  -oPHn  "Version Information:" *.html`; a_num=`echo $a|grep -o -P ".*?(?=\.html)"` ; b=`head -$a /root/script/httprobe.txt |tail -1` ; echo $a|tee -a   $output/4_html_gp.txt ; echo $b|tee -a   $output/4_html_gp.txt
+a=`rg  -oPHn  "Tomcat/" *.html`; a_num=`echo $a|grep -o -P ".*?(?=\.html)"` ; b=`head -$a_num /root/script/httprobe.txt |tail -1` ; echo $a|tee -a   $output/4_html_gp.txt ; echo $b|tee -a   $output/4_html_gp.txt
+a=`rg  -oPHn  "This is the default welcome page" *.html`; a_num=`echo $a|grep -o -P ".*?(?=\.html)"` ; b=`head -$a_num /root/script/httprobe.txt |tail -1` ; echo $a|tee -a   $output/4_html_gp.txt ; echo $b|tee -a   $output/4_html_gp.txt
+a=`rg  -oPHn  "PHP Version" *.html`; a_num=`echo $a|grep -o -P ".*?(?=\.html)"` ; b=`head -$a_num /root/script/httprobe.txt |tail -1` ; echo $a|tee -a   $output/4_html_gp.txt ; echo $b|tee -a   $output/4_html_gp.txt
+a=`rg  -oPHn  "This page is used to test the proper operation of the" *.html`; a_num=`echo $a|grep -o -P ".*?(?=\.html)"` ; b=`head -$a_num /root/script/httprobe.txt |tail -1` ; echo $a|tee -a   $output/4_html_gp.txt ; echo $b|tee -a   $output/4_html_gp.txt
 
-
-rm $output/4_html_grep.txt
-rm -rf $output/4_html
-touch $output/4_html_gp.txt ; sort $output/4_html_grep.txt|uniq|tee -a $output/4_html_gp.txt ; rm $output/4_html_grep.txt 
+rm -rf $output/3_html
 cd /root/script/3_httprobe
