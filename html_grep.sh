@@ -1,5 +1,6 @@
 #!/bin/bash
 output=$output
+cd $output/3_html
 rg  -oPHn  "pwd..............................................................." *.html|tee -a   $output/4_html_grep.txt
 rg  -oPHn  "pass..............................................................." *.html|tee -a   $output/4_html_grep.txt
 rg  -oPHn  "key..............................................................." *.html|tee -a   $output/4_html_grep.txt
@@ -39,3 +40,4 @@ rg  -oPHn  "This page is used to test the proper operation of the" *.html|tee -a
 rm $output/4_html_grep.txt
 rm -rf $output/4_html
 touch $output/4_html_gp.txt ; sort $output/4_html_grep.txt|uniq|tee -a $output/4_html_gp.txt ; rm $output/4_html_grep.txt 
+cd /root/script/3_httprobe
