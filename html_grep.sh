@@ -52,7 +52,7 @@ rg -oPHn "secret=...............................................................
 rg -oPHn "key=..............................................................." *.html >> $output/4_html_grep.txt
 rg -oPHn "pass=..............................................................." *.html >> $output/4_html_grep.txt
 rg -oPHn "pwd=..............................................................." *.html >> $output/4_html_grep.txt
-sed -e "/\+/d" $output/4_html_grep.txt | sed -e "/\?/d" | sed -e "/\!/d" | sed -e "/\&/d" > 1.txt ; mv 1.txt $output/4_html_grep.txt
+sed -e '/+/d' $output/4_html_grep.txt | sed -e '/?/d' | sed -e '/!/d' | sed -e '/&/d' > 1.txt ; mv 1.txt $output/4_html_grep.txt
 
 #rg  -l "wp-content" *.html >>   $output/4_html_num.txt
 #sed -e "s/\.html//g"  $output/4_html_num.txt >> $output/4_html_grep.txt ; rm $output/4_html_num.txt
