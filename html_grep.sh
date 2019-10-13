@@ -74,5 +74,5 @@ rg  -oPHn  "PHP Version" *.html >> 1.txt;for a in `cat 1.txt`; do a_num=`echo $a
 rg  -oPHn  "This page is used to test the proper operation of the" *.html >> 1.txt;for a in `cat 1.txt`; do a_num=`echo $a|grep -o -P ".*?(?=\.html)"` ; b=`head -$a_num /root/script/3_httprobe/httprobe.txt |tail -1` ; echo $a >>   $output/4_html_gp.txt ; echo $b >>   $output/4_html_gp.txt; done; rm 1.txt
 rg -oPHn "XSS Hunter Team" *.html >> $output/4_html_gp.txt
 
-rm -rf $output/3_html
 cd /root/script/3_httprobe
+rm -rf $output/3_html
