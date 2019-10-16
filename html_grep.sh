@@ -1,51 +1,51 @@
 #!/bin/bash
 output=$output
 cd $output/3_html
-rg -oPHn "smpt ..............................................................." *.html >> $output/4_html_grep.txt
-rg -oPHn "priva ..............................................................." *.html >> $output/4_html_grep.txt
-rg -oPHn "addr ..............................................................." *.html >> $output/4_html_grep.txt
-rg -oPHn "ip ..............................................................." *.html >> $output/4_html_grep.txt
-rg -oPHn "phone ..............................................................." *.html >> $output/4_html_grep.txt
-rg -oPHn "account ..............................................................." *.html >> $output/4_html_grep.txt
-rg -oPHn "token ..............................................................." *.html >> $output/4_html_grep.txt
-rg -oPHn "manager ..............................................................." *.html >> $output/4_html_grep.txt
-rg -oPHn "root ..............................................................." *.html >> $output/4_html_grep.txt
-rg -oPHn "admin ..............................................................." *.html >> $output/4_html_grep.txt
-rg -oPHn "user ..............................................................." *.html >> $output/4_html_grep.txt
-rg -oPHn "secret ..............................................................." *.html >> $output/4_html_grep.txt
-rg -oPHn "pass ..............................................................." *.html >> $output/4_html_grep.txt
-rg -oPHn "pwd ..............................................................." *.html >> $output/4_html_grep.txt
+rg -oPHn "smpt .........................." *.html >> $output/4_html_grep.txt
+rg -oPHn "priva .........................." *.html >> $output/4_html_grep.txt
+rg -oPHn "addr .........................." *.html >> $output/4_html_grep.txt
+rg -oPHn "ip .........................." *.html >> $output/4_html_grep.txt
+rg -oPHn "phone .........................." *.html >> $output/4_html_grep.txt
+rg -oPHn "account .........................." *.html >> $output/4_html_grep.txt
+rg -oPHn "token .........................." *.html >> $output/4_html_grep.txt
+rg -oPHn "manager .........................." *.html >> $output/4_html_grep.txt
+rg -oPHn "root .........................." *.html >> $output/4_html_grep.txt
+rg -oPHn "admin .........................." *.html >> $output/4_html_grep.txt
+rg -oPHn "user .........................." *.html >> $output/4_html_grep.txt
+rg -oPHn "secret .........................." *.html >> $output/4_html_grep.txt
+rg -oPHn "pass .........................." *.html >> $output/4_html_grep.txt
+rg -oPHn "pwd .........................." *.html >> $output/4_html_grep.txt
 
-rg -oPHn "smpt:..............................................................." *.html >> $output/4_html_grep.txt
-rg -oPHn "priva:..............................................................." *.html >> $output/4_html_grep.txt
-rg -oPHn "addr:..............................................................." *.html >> $output/4_html_grep.txt
-rg -oPHn "ip:..............................................................." *.html >> $output/4_html_grep.txt
-rg -oPHn "phone:..............................................................." *.html >> $output/4_html_grep.txt
-rg -oPHn "account:..............................................................." *.html >> $output/4_html_grep.txt
-rg -oPHn "token:..............................................................." *.html >> $output/4_html_grep.txt
-rg -oPHn "manager:..............................................................." *.html >> $output/4_html_grep.txt
-rg -oPHn "root:..............................................................." *.html >> $output/4_html_grep.txt
-rg -oPHn "admin:..............................................................." *.html >> $output/4_html_grep.txt
-rg -oPHn "user:..............................................................." *.html >> $output/4_html_grep.txt
-rg -oPHn "secret:..............................................................." *.html >> $output/4_html_grep.txt
-rg -oPHn "pass:..............................................................." *.html >> $output/4_html_grep.txt
-rg -oPHn "pwd:..............................................................." *.html >> $output/4_html_grep.txt
+rg -oPHn "smpt:.........................." *.html >> $output/4_html_grep.txt
+rg -oPHn "priva:.........................." *.html >> $output/4_html_grep.txt
+rg -oPHn "addr:.........................." *.html >> $output/4_html_grep.txt
+rg -oPHn "ip:.........................." *.html >> $output/4_html_grep.txt
+rg -oPHn "phone:.........................." *.html >> $output/4_html_grep.txt
+rg -oPHn "account:.........................." *.html >> $output/4_html_grep.txt
+rg -oPHn "token:.........................." *.html >> $output/4_html_grep.txt
+rg -oPHn "manager:.........................." *.html >> $output/4_html_grep.txt
+rg -oPHn "root:.........................." *.html >> $output/4_html_grep.txt
+rg -oPHn "admin:.........................." *.html >> $output/4_html_grep.txt
+rg -oPHn "user:.........................." *.html >> $output/4_html_grep.txt
+rg -oPHn "secret:.........................." *.html >> $output/4_html_grep.txt
+rg -oPHn "pass:.........................." *.html >> $output/4_html_grep.txt
+rg -oPHn "pwd:.........................." *.html >> $output/4_html_grep.txt
 
-rg -oPHn "smpt=..............................................................." *.html >> $output/4_html_grep.txt
-rg -oPHn "smpt=..............................................................." *.html >> $output/4_html_grep.txt
-rg -oPHn "priva=..............................................................." *.html >> $output/4_html_grep.txt
-rg -oPHn "addr=..............................................................." *.html >> $output/4_html_grep.txt
-rg -oPHn "ip=..............................................................." *.html >> $output/4_html_grep.txt
-rg -oPHn "phone=..............................................................." *.html >> $output/4_html_grep.txt
-rg -oPHn "account=..............................................................." *.html >> $output/4_html_grep.txt
-rg -oPHn "token=..............................................................." *.html >> $output/4_html_grep.txt
-rg -oPHn "manager=..............................................................." *.html >> $output/4_html_grep.txt
-rg -oPHn "root=..............................................................." *.html >> $output/4_html_grep.txt
-rg -oPHn "admin=..............................................................." *.html >> $output/4_html_grep.txt
-rg -oPHn "user=..............................................................." *.html >> $output/4_html_grep.txt
-rg -oPHn "secret=..............................................................." *.html >> $output/4_html_grep.txt
-rg -oPHn "pass=..............................................................." *.html >> $output/4_html_grep.txt
-rg -oPHn "pwd=..............................................................." *.html >> $output/4_html_grep.txt
+rg -oPHn "smpt=.........................." *.html >> $output/4_html_grep.txt
+rg -oPHn "smpt=.........................." *.html >> $output/4_html_grep.txt
+rg -oPHn "priva=.........................." *.html >> $output/4_html_grep.txt
+rg -oPHn "addr=.........................." *.html >> $output/4_html_grep.txt
+rg -oPHn "ip=.........................." *.html >> $output/4_html_grep.txt
+rg -oPHn "phone=.........................." *.html >> $output/4_html_grep.txt
+rg -oPHn "account=.........................." *.html >> $output/4_html_grep.txt
+rg -oPHn "token=.........................." *.html >> $output/4_html_grep.txt
+rg -oPHn "manager=.........................." *.html >> $output/4_html_grep.txt
+rg -oPHn "root=.........................." *.html >> $output/4_html_grep.txt
+rg -oPHn "admin=.........................." *.html >> $output/4_html_grep.txt
+rg -oPHn "user=.........................." *.html >> $output/4_html_grep.txt
+rg -oPHn "secret=.........................." *.html >> $output/4_html_grep.txt
+rg -oPHn "pass=.........................." *.html >> $output/4_html_grep.txt
+rg -oPHn "pwd=.........................." *.html >> $output/4_html_grep.txt
 sed -e '/+/d' $output/4_html_grep.txt | sed -e '/?/d' | sed -e '/!/d' | sed -e '/&/d' > 1.txt ; mv 1.txt $output/4_html_grep.txt
 
 #rg  -l "wp-content" *.html >>   $output/4_html_num.txt
