@@ -4,9 +4,7 @@ cd $output/3_html
 rg -oPHn "smpt .........................." *.html >> $output/4_html_grep.txt
 rg -oPHn "priva .........................." *.html >> $output/4_html_grep.txt
 rg -oPHn "addr .........................." *.html >> $output/4_html_grep.txt
-rg -oPHn "ip .........................." *.html >> $output/4_html_grep.txt
 rg -oPHn "phone .........................." *.html >> $output/4_html_grep.txt
-rg -oPHn "account .........................." *.html >> $output/4_html_grep.txt
 rg -oPHn "token .........................." *.html >> $output/4_html_grep.txt
 rg -oPHn "manager .........................." *.html >> $output/4_html_grep.txt
 rg -oPHn "root .........................." *.html >> $output/4_html_grep.txt
@@ -19,9 +17,7 @@ rg -oPHn "pwd .........................." *.html >> $output/4_html_grep.txt
 rg -oPHn "smpt:.........................." *.html >> $output/4_html_grep.txt
 rg -oPHn "priva:.........................." *.html >> $output/4_html_grep.txt
 rg -oPHn "addr:.........................." *.html >> $output/4_html_grep.txt
-rg -oPHn "ip:.........................." *.html >> $output/4_html_grep.txt
 rg -oPHn "phone:.........................." *.html >> $output/4_html_grep.txt
-rg -oPHn "account:.........................." *.html >> $output/4_html_grep.txt
 rg -oPHn "token:.........................." *.html >> $output/4_html_grep.txt
 rg -oPHn "manager:.........................." *.html >> $output/4_html_grep.txt
 rg -oPHn "root:.........................." *.html >> $output/4_html_grep.txt
@@ -32,12 +28,9 @@ rg -oPHn "pass:.........................." *.html >> $output/4_html_grep.txt
 rg -oPHn "pwd:.........................." *.html >> $output/4_html_grep.txt
 
 rg -oPHn "smpt=.........................." *.html >> $output/4_html_grep.txt
-rg -oPHn "smpt=.........................." *.html >> $output/4_html_grep.txt
 rg -oPHn "priva=.........................." *.html >> $output/4_html_grep.txt
 rg -oPHn "addr=.........................." *.html >> $output/4_html_grep.txt
-rg -oPHn "ip=.........................." *.html >> $output/4_html_grep.txt
 rg -oPHn "phone=.........................." *.html >> $output/4_html_grep.txt
-rg -oPHn "account=.........................." *.html >> $output/4_html_grep.txt
 rg -oPHn "token=.........................." *.html >> $output/4_html_grep.txt
 rg -oPHn "manager=.........................." *.html >> $output/4_html_grep.txt
 rg -oPHn "root=.........................." *.html >> $output/4_html_grep.txt
