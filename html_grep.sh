@@ -27,15 +27,16 @@ cd $output
 touch $output/4_html_gp.txt ; sort -u $output/4_html_grep.txt -o $output/4_html_gp.txt ; rm $output/4_html_grep.txt 
 
 cd $output/3_html
-rg  -oPHn  "Apache/" *.html >> $output/4_html_grep.txt
-rg  -oPHn  "Version Information:" *.html >> $output/4_html_grep.txt
-rg  -oPHn  "Tomcat/" *.html >> $output/4_html_grep.txt
-rg  -oPHn  "This is the default welcome page" *.html >> $output/4_html_grep.txt
-rg  -oPHn  "PHP Version" *.html >> $output/4_html_grep.txt
-rg  -oPHn  "This page is used to test the proper operation of the" *.html >> $output/4_html_grep.txt
-rg  -oPHn  "wordpress" *.html >> $output/4_html_grep.txt
-rg  -oPHn  "XSS Hunter Team" *.html >> $output/4_html_grep.txt
-rg  -oPHn  "CRLF" *.html >> $output/4_html_grep.txt
+rg  -oPHn  "Apache/" *.html >> $output/4_html_gp.txt
+rg  -oPHn  "Version Information:" *.html >> $output/4_html_gp.txt
+rg  -oPHn  "Tomcat/" *.html >> $output/4_html_gp.txt
+rg  -oPHn  "This is the default welcome page" *.html >> $output/4_html_gp.txt
+rg  -oPHn  "PHP Version" *.html >> $output/4_html_gp.txt
+rg  -oPHn  "This page is used to test the proper operation of the" *.html >> $output/4_html_gp.txt
+rg  -oPHn  "wordpress" *.html >> $output/4_html_gp.txt
+rg  -oPHn  "XSS Hunter Team" *.html >> $output/4_html_gp.txt
+rg  -oPHn  "CRLF" *.html >> $output/4_html_gp.txt
+
 
 
 cd /root/script/3_httprobe
