@@ -27,15 +27,15 @@ cd $output
 touch $output/4_html_gp.txt ; sort -u $output/4_html_grep.txt -o $output/4_html_gp.txt ; rm $output/4_html_grep.txt 
 
 cd $output/3_html
-rg  -oPHn  "Apache/" *.html >> 1.txt;for a in `cat 1.txt`; do a_num=`echo $a|grep -o -P ".*?(?=\.html)"` ;b=`head -$a_num /root/script/3_httprobe/httprobe.txt |tail -1` ; echo $a >>   $output/4_html_gp.txt ; echo $b >>   $output/4_html_gp.txt; done; rm 1.txt
-rg  -oPHn  "Version Information:" *.html >> 1.txt;for a in `cat 1.txt`; do a_num=`echo $a|grep -o -P ".*?(?=\.html)"` ; b=`head -$a /root/script/3_httprobe/httprobe.txt |tail -1` ; echo $a >>   $output/4_html_gp.txt ; echo $b >>   $output/4_html_gp.txt; done; rm 1.txt
-rg  -oPHn  "Tomcat/" *.html >> 1.txt;for a in `cat 1.txt`; do a_num=`echo $a|grep -o -P ".*?(?=\.html)"` ; b=`head -$a_num /root/script/3_httprobe/httprobe.txt |tail -1` ; echo $a >>   $output/4_html_gp.txt ; echo $b >>   $output/4_html_gp.txt; done; rm 1.txt
-rg  -oPHn  "This is the default welcome page" *.html >> 1.txt;for a in `cat 1.txt`; do a_num=`echo $a|grep -o -P ".*?(?=\.html)"` ; b=`head -$a_num /root/script/3_httprobe/httprobe.txt |tail -1` ; echo $a >>   $output/4_html_gp.txt ; echo $b >>   $output/4_html_gp.txt ; done; rm 1.txt
-rg  -oPHn  "PHP Version" *.html >> 1.txt;for a in `cat 1.txt`; do a_num=`echo $a|grep -o -P ".*?(?=\.html)"` ; b=`head -$a_num /root/script/3_httprobe/httprobe.txt |tail -1` ; echo $a >>   $output/4_html_gp.txt ; echo $b >>   $output/4_html_gp.txt; done; rm 1.txt
-rg  -oPHn  "This page is used to test the proper operation of the" *.html >> 1.txt;for a in `cat 1.txt`; do a_num=`echo $a|grep -o -P ".*?(?=\.html)"` ; b=`head -$a_num /root/script/3_httprobe/httprobe.txt |tail -1` ; echo $a >>   $output/4_html_gp.txt ; echo $b >>   $output/4_html_gp.txt; done; rm 1.txt
-rg  -oPHn  "wordpress" *.html >> 1.txt;for a in `cat 1.txt`; do a_num=`echo $a|grep -o -P ".*?(?=\.html)"` ;b=`head -$a_num /root/script/3_httprobe/httprobe.txt |tail -1` ; echo $a >>   $output/4_html_gp.txt ; echo $b >>   $output/4_html_gp.txt; done; rm 1.txt
-rg  -oPHn  "XSS Hunter Team" *.html >> 1.txt;for a in `cat 1.txt`; do a_num=`echo $a|grep -o -P ".*?(?=\.html)"` ;b=`head -$a_num /root/script/3_httprobe/httprobe.txt |tail -1` ; echo $a >>   $output/4_html_gp.txt ; echo $b >>   $output/4_html_gp.txt; done; rm 1.txt
-rg  -oPHn  "CRLF" *.html >> 1.txt;for a in `cat 1.txt`; do a_num=`echo $a|grep -o -P ".*?(?=\.html)"` ;b=`head -$a_num /root/script/3_httprobe/httprobe.txt |tail -1` ; echo $a >>   $output/4_html_gp.txt ; echo $b >>   $output/4_html_gp.txt; done; rm 1.txt
+rg  -oPHn  "Apache/" *.html >> $output/4_html_grep.txt
+rg  -oPHn  "Version Information:" *.html >> $output/4_html_grep.txt
+rg  -oPHn  "Tomcat/" *.html >> $output/4_html_grep.txt
+rg  -oPHn  "This is the default welcome page" *.html >> $output/4_html_grep.txt
+rg  -oPHn  "PHP Version" *.html >> $output/4_html_grep.txt
+rg  -oPHn  "This page is used to test the proper operation of the" *.html >> $output/4_html_grep.txt
+rg  -oPHn  "wordpress" *.html >> $output/4_html_grep.txt
+rg  -oPHn  "XSS Hunter Team" *.html >> $output/4_html_grep.txt
+rg  -oPHn  "CRLF" *.html >> $output/4_html_grep.txt
 
 
 cd /root/script/3_httprobe
