@@ -35,7 +35,7 @@ rg  -oPHn  "PHP Version" *.html >> $output/4_html_gp.txt
 rg  -oPHn  "This page is used to test the proper operation of the" *.html >> $output/4_html_gp.txt
 rg  -oPHn  "wordpress" *.html >> $output/4_html_gp.txt
 rg  -oPHn  "XSS Hunter Team" *.html >> $output/4_html_gp.txt
-rg  -oPHn  "CRLF" *.html >> $output/4_html_gp.txt
+rg  -oPHn  "CRLFheader" *.html >> $output/4_html_gp.txt
 
 
 
