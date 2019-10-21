@@ -41,3 +41,4 @@ rg  -oPHn  "CRLFheader" *.html >> $output/4_html_gp.txt
 
 cd /root/script/3_httprobe
 rm -rf $output/3_html
+date "+%Y-%m-%d_%H:%M:%S" >> /root/date.txt ; echo 'html' >> /root/date.txt
