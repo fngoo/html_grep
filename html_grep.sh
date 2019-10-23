@@ -13,6 +13,10 @@ rg -oPHn "admin=.................................................." *.html >> $o
 rg -oPHn "manager .................................................." *.html >> $output/4_html_grep.txt
 rg -oPHn "manager:.................................................." *.html >> $output/4_html_grep.txt
 rg -oPHn "manager=.................................................." *.html >> $output/4_html_grep.txt
+rg  -oPHn  "oracle" *.html >> $output/4_html_grep.txt
+rg  -oPHn  "mysql" *.html >> $output/4_html_grep.txt
+rg  -oPHn  "config" *.html >> $output/4_html_grep.txt
+rg  -oPHn  "url:" *.html >> $output/4_html_grep.txt
 sed -e '/+/d' $output/4_html_grep.txt | sed -e '/?/d' | sed -e '/!/d' | sed -e '/&/d' > 1.txt ; mv 1.txt $output/4_html_grep.txt
 
 #rg  -l "wp-content" *.html >>   $output/4_html_num.txt
