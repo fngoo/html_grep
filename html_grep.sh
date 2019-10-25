@@ -13,10 +13,10 @@ rg -oPHn "admin=.................................................." *.html >> $o
 rg -oPHn "manager .................................................." *.html >> $output/4_html_grep.txt
 rg -oPHn "manager:.................................................." *.html >> $output/4_html_grep.txt
 rg -oPHn "manager=.................................................." *.html >> $output/4_html_grep.txt
-rg  -oPHn  "oracle" *.html >> $output/4_html_grep.txt
-rg  -oPHn  "mysql" *.html >> $output/4_html_grep.txt
-rg  -oPHn  "config" *.html >> $output/4_html_grep.txt
-rg  -oPHn  "url:" *.html >> $output/4_html_grep.txt
+rg  -oPHn  "oracle................................................." *.html >> $output/4_html_grep.txt
+rg  -oPHn  "mysql..................................................." *.html >> $output/4_html_grep.txt
+rg  -oPHn  "config.............................................." *.html >> $output/4_html_grep.txt
+rg  -oPHn  "url:.............................................." *.html >> $output/4_html_grep.txt
 sed -e '/+/d' $output/4_html_grep.txt | sed -e '/?/d' | sed -e '/!/d' | sed -e '/&/d' > 1.txt ; mv 1.txt $output/4_html_grep.txt
 
 #rg  -l "wp-content" *.html >>   $output/4_html_num.txt
@@ -37,7 +37,6 @@ rg  -oPHn  "Tomcat/" *.html >> $output/4_html_gp.txt
 rg  -oPHn  "This is the default welcome page" *.html >> $output/4_html_gp.txt
 rg  -oPHn  "PHP Version" *.html >> $output/4_html_gp.txt
 rg  -oPHn  "This page is used to test the proper operation of the" *.html >> $output/4_html_gp.txt
-rg  -oPHn  "wordpress" *.html >> $output/4_html_gp.txt
 rg  -oPHn  "XSS Hunter Team" *.html >> $output/4_html_gp.txt
 rg  -oPHn  "CRLFheader" *.html >> $output/4_html_gp.txt
 
