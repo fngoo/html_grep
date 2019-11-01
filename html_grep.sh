@@ -4,9 +4,9 @@ cd $output/3_html
 rg  -oPHn  "pwd .................................................." *.html >> $output/4_html_grep.txt
 rg  -oPHn  "pwd:.................................................." *.html >> $output/4_html_grep.txt
 rg  -oPHn  "pwd=.................................................." *.html >> $output/4_html_grep.txt
-rg  -oPHn  "pass ................................................." *.html >> $output/4_html_grep.txt
-rg  -oPHn  "pass:.................................................." *.html >> $output/4_html_grep.txt
-rg  -oPHn  "pass=.................................................." *.html >> $output/4_html_grep.txt
+rg  -oPHn  "password ................................................." *.html >> $output/4_html_grep.txt
+rg  -oPHn  "password:.................................................." *.html >> $output/4_html_grep.txt
+rg  -oPHn  "password=.................................................." *.html >> $output/4_html_grep.txt
 rg -oPHn "admin .................................................." *.html >> $output/4_html_grep.txt
 rg -oPHn "admin:.................................................." *.html >> $output/4_html_grep.txt
 rg -oPHn "admin=.................................................." *.html >> $output/4_html_grep.txt
@@ -30,6 +30,13 @@ cd $output
 touch $output/4_html_gp.txt ; sort -u $output/4_html_grep.txt -o $output/4_html_gp.txt ; rm $output/4_html_grep.txt 
 
 cd $output/3_html
+echo '' >> $output/4_html_gp.txt
+echo '' >> $output/4_html_gp.txt
+echo '' >> $output/4_html_gp.txt
+echo '' >> $output/4_html_gp.txt
+echo '' >> $output/4_html_gp.txt
+echo '' >> $output/4_html_gp.txt
+
 rg  -oPHn  "Apache/" *.html >> $output/4_html_gp.txt
 rg  -oPHn  "Version Information:" *.html >> $output/4_html_gp.txt
 rg  -oPHn  "Tomcat/" *.html >> $output/4_html_gp.txt
