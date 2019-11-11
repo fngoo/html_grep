@@ -1,6 +1,7 @@
 #!/bin/bash
 output=$output
 cd $output/3_html
+rg -oPHn "http.*?(?=\")" *.html >> $output/4_html_grep.txt
 rg  -oPHn  "pwd .................................................." *.html >> $output/4_html_grep.txt
 rg  -oPHn  "pwd:.................................................." *.html >> $output/4_html_grep.txt
 rg  -oPHn  "pwd=.................................................." *.html >> $output/4_html_grep.txt
@@ -26,7 +27,7 @@ sed -e '/+/d' $output/4_html_grep.txt | sed -e '/?/d' | sed -e '/!/d' | sed -e '
 #done
 
 cd $output
-touch $output/4_html_gp.txt ; sort -u $output/4_html_grep.txt -o $output/4_html_gp.txt ; rm $output/4_html_grep.txt 
+touch $output/4_html_gp.txt ; cat $output/4_html_grep.txt >> $output/4_html_gp.txt ; rm $output/4_html_grep.txt 
 
 cd $output/3_html
 echo '' >> $output/4_html_gp.txt
