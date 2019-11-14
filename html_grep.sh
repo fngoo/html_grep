@@ -1,7 +1,6 @@
 #!/bin/bash
 output=$output
 cd $output/3_html
-rg -oPHn "http.*?//.*?(?=\")" *.html >> $output/4_html_grep.txt
 rg  -oPHn  "pwd .................................................." *.html >> $output/4_html_grep.txt
 rg  -oPHn  "pwd:.................................................." *.html >> $output/4_html_grep.txt
 rg  -oPHn  "pwd=.................................................." *.html >> $output/4_html_grep.txt
