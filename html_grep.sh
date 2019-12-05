@@ -1,20 +1,21 @@
 #!/bin/bash
 output=$output
 cd $output/3_html
-rg  -oPHn  "pwd .................................................." *.html >> $output/4_html_grep.txt
-rg  -oPHn  "pwd:.................................................." *.html >> $output/4_html_grep.txt
-rg  -oPHn  "pwd=.................................................." *.html >> $output/4_html_grep.txt
-rg  -oPHn  "password ................................................." *.html >> $output/4_html_grep.txt
-rg  -oPHn  "password:.................................................." *.html >> $output/4_html_grep.txt
-rg  -oPHn  "password=.................................................." *.html >> $output/4_html_grep.txt
-rg -oPHn "admin .................................................." *.html >> $output/4_html_grep.txt
-rg -oPHn "admin:.................................................." *.html >> $output/4_html_grep.txt
-rg -oPHn "admin=.................................................." *.html >> $output/4_html_grep.txt
-rg -oPHn "manager .................................................." *.html >> $output/4_html_grep.txt
-rg -oPHn "manager:.................................................." *.html >> $output/4_html_grep.txt
-rg -oPHn "manager=.................................................." *.html >> $output/4_html_grep.txt
-rg  -oPHn  "oracle................................................." *.html >> $output/4_html_grep.txt
-rg  -oPHn  "mysql..................................................." *.html >> $output/4_html_grep.txt
+rg  -oPHn  ".................................token .................................................." *.html >> $output/4_html_grep.txt
+rg  -oPHn  ".................................pwd .................................................." *.html >> $output/4_html_grep.txt
+rg  -oPHn  ".................................pwd:.................................................." *.html >> $output/4_html_grep.txt
+rg  -oPHn  ".................................pwd=.................................................." *.html >> $output/4_html_grep.txt
+rg  -oPHn  ".................................password ................................................." *.html >> $output/4_html_grep.txt
+rg  -oPHn  ".................................password:.................................................." *.html >> $output/4_html_grep.txt
+rg  -oPHn  ".................................password=.................................................." *.html >> $output/4_html_grep.txt
+rg -oPHn ".................................admin .................................................." *.html >> $output/4_html_grep.txt
+rg -oPHn ".................................admin:.................................................." *.html >> $output/4_html_grep.txt
+rg -oPHn ".................................admin=.................................................." *.html >> $output/4_html_grep.txt
+rg -oPHn ".................................manager .................................................." *.html >> $output/4_html_grep.txt
+rg -oPHn ".................................manager:.................................................." *.html >> $output/4_html_grep.txt
+rg -oPHn ".................................manager=.................................................." *.html >> $output/4_html_grep.txt
+rg  -oPHn  ".................................oracle................................................." *.html >> $output/4_html_grep.txt
+rg  -oPHn  ".................................mysql..................................................." *.html >> $output/4_html_grep.txt
 sed -e '/+/d' $output/4_html_grep.txt | sed -e '/?/d' | sed -e '/!/d' | sed -e '/&/d' > 1.txt ; mv 1.txt $output/4_html_grep.txt
 
 #rg  -l "wp-content" *.html >>   $output/4_html_num.txt
