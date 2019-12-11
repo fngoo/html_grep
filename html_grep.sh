@@ -2,6 +2,19 @@
 output=$output
 cd $output/3_html
 
+rg -l login *.html | sort -u | awk -F"." '{print $1}' >> burp.txt
+rg -l account *.html | sort -u | awk -F"." '{print $1}' >> burp.txt
+rg -l sign *.html | sort -u | awk -F"." '{print $1}' >> burp.txt
+rg -l log *.html | sort -u | awk -F"." '{print $1}' >> burp.txt
+rg -l 登 *.html | sort -u | awk -F"." '{print $1}' >> burp.txt
+rg -l 账 *.html | sort -u | awk -F"." '{print $1}' >> burp.txt
+sort -u burp.txt -o burp.txt
+for line in `cat burp.txt`
+do
+head -$line /root/script/3_httprobe/httprobe.txt |tail -1 >> $output/0_burp.txt ; sort -u $output/0_burp.txt -o $output/0_burp.txt
+done
+rm burp.txt
+
 rg -l form *.html | sort -u | awk -F"." '{print $1}' > login.txt
 for line in `cat login.txt`
 do
